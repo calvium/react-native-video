@@ -1,6 +1,12 @@
 #import "RCTVideoManager.h"
 #import "RCTVideo.h"
+
+#if __has_include("RCTBridge.h")
+#import "RCTBridge.h"
+#else
 #import <React/RCTBridge.h>
+#endif
+
 #import <AVFoundation/AVFoundation.h>
 
 @implementation RCTVideoManager

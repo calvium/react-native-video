@@ -1,8 +1,17 @@
-#import <React/RCTConvert.h>
-#import "RCTVideo.h"
+
+#if __has_include("RCTConvert.h")
+#import "RCTConvert.h"
+#import "RCTBridgeModule.h"
+#import "RCTEventDispatcher.h"
+#import "UIView+React.h"
+#else
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/UIView+React.h>
+#import <React/RCTConvert.h>
+#endif
+
+#import "RCTVideo.h"
 
 static NSString *const statusKeyPath = @"status";
 static NSString *const playbackLikelyToKeepUpKeyPath = @"playbackLikelyToKeepUp";
